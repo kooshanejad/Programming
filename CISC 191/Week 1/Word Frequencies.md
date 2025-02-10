@@ -9,7 +9,7 @@
 Hi 2
 Mark 2"
 I solved this by changing "if (wordsProcessed[j].equalsIgnoreCase(currWord))" to: "if (wordsProcessed[j].equals(currWord))" when checking for words that have already been processed.
-4) Create a video explaining how the code works. The video should show your face on one side of the screen preferably the top or bottom right of the screen. (1 mark)
+4) https://youtube.com/shorts/IOraSpIeMKI?feature=share
 5)
 ```java
 import java.util.Scanner;
