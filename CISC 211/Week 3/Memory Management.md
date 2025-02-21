@@ -33,6 +33,5 @@ public class StackHeapExample {
         p1 = null; // Marking object for garbage collection
     }
 }
-
-![StackHeap](https://github.com/user-attachments/assets/1e700ef2-5244-4fd1-8fe4-580583fcc3e8)
 ```
+![StackHeap](https://github.com/user-attachments/assets/1e700ef2-5244-4fd1-8fe4-580583fcc3e8)
