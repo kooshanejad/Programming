@@ -1,7 +1,10 @@
 # Input and Output
 
-https://youtube.com/shorts/BulWdGYO1Ds?feature=share   
-Code:
+1. Flowchart:   
+![Input and Output](https://github.com/user-attachments/assets/badcff68-1dad-452d-a6d3-d3f59260640e)
+2. The lab was not very challenging apart from reviewing topics I learned in my beginner Java class. I reviewed some of my old labs to help with this.
+3. https://youtube.com/shorts/BulWdGYO1Ds?feature=share   
+4. Code:
 ```java
 import java.io.File;
 import java.io.FileNotFoundException;
