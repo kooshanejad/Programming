@@ -1,7 +1,8 @@
 # Inheritance
 
-1. Draw a flowchart of your thought process. I found this online flowchart website very useful. However, you can use any application of your choice. (2 marks).
-2. What were your challenges in performing the lab?
+1. Flowchart:   
+![Inheritance](https://github.com/user-attachments/assets/dcc2c8a3-7904-43c1-b621-826b07403e05)
+2. This lab was pretty simple honestly, I did not really have any major challenges.
 3. Video:
 4. Code:
 
