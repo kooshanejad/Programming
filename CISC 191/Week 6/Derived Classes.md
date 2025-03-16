@@ -1,8 +1,8 @@
 # Derived Classes
 
-1. Flowchart:
-
-2. What were your challenges in performing the lab (from design to the implementation phases)? (2 marks).
+1. Flowchart:   
+![Derived Classes](https://github.com/user-attachments/assets/922aac6c-4322-45ed-8e76-5d1b5b480a9b)
+2. There were not any major challenges honestly, I just had to review some of my old labs from CISC 190 in order to refresh my memory.
 3. Video:
 4. Code:
 ```java
