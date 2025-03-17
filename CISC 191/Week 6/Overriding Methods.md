@@ -110,7 +110,7 @@ public class Main {
         System.out.println("Enter Publication Date: ");
         String publicationDate = input.nextLine();
 
-        // Get Encyclopedia-specific information from user
+        // Get Encyclopedia info from user
         System.out.println("Enter Book Title: ");
         String title2 = input.nextLine();
         System.out.println("Enter Author: ");
