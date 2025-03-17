@@ -3,7 +3,7 @@
 1. Flowchart:   
 ![Inheritance](https://github.com/user-attachments/assets/dcc2c8a3-7904-43c1-b621-826b07403e05)
 2. This lab was pretty simple honestly, I did not really have any major challenges.
-3. Video:
+3. Video: https://youtube.com/shorts/oAGIgIpWiQ4?feature=share
 4. Code:
 
 ```java
