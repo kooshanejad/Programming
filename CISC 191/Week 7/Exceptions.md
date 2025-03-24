@@ -3,7 +3,7 @@
 1. Flowchart:   
 ![Exceptions](https://github.com/user-attachments/assets/51c84f3c-c86e-4893-8a28-860a930aa7ba)
 2. My challenges involved going through earlier labs to remember some basics.
-3. Video: 
+3. Video: https://youtu.be/YckSeiwKd5o
 4. Code:
 ```java
 public class Pedometer {
