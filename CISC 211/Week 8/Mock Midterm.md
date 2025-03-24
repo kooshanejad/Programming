@@ -48,6 +48,11 @@ Convert -10 into binary using 1's and 2's complements:
 Invert: 11110101   
 Result: 11110101   
 
-2's complement:
-Add one to 11110101:
-Result: 11110110
+2's complement:   
+Add one to 11110101:   
+Result: 11110110   
+
+Transfer bits into cache memory:   
+Index: 0, V: 1, Tag: 10111   
+Index: 1, V: 1, Tag: 10000   
+Index: 2, V: 1, Tag: 11101
