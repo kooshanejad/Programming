@@ -64,19 +64,42 @@ public class Accessories extends Aisle {
 
 }
 
-public class Accessories extends Aisle {
-    private String accessory;
+import java.util.Scanner;
 
-    public Accessories(String accessory, String location) {
-        super(location);
-        this.accessory = accessory;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Get Paint details
+        System.out.print("Enter paint company name: ");
+        String paintCompany = input.nextLine();
+        System.out.print("Enter paint type (Gloss, Semi-gloss, Flat): ");
+        String paintType = input.nextLine();
+        System.out.print("Enter paint location: ");
+        String paintLocation = input.nextLine();
+        Paints paint = new Paints(paintCompany, paintType, paintLocation);
+
+        // Get Brush/Roller details
+        System.out.print("Enter brush/roller type: ");
+        String brushType = input.nextLine();
+        System.out.print("Enter brush/roller location: ");
+        String brushLocation = input.nextLine();
+        BrushesAndRollers brushes = new BrushesAndRollers(brushType, brushLocation);
+
+        // Get Accessory details
+        System.out.print("Enter accessory name: ");
+        String accessoryName = input.nextLine();
+        System.out.print("Enter accessory location: ");
+        String accessoryLocation = input.nextLine();
+        Accessories accessory = new Accessories(accessoryName, accessoryLocation);
+
+        // Display entered data
+        System.out.println("\nInventory Details:");
+        paint.displayInfo();
+        brushes.displayInfo();
+        accessory.displayInfo();
+
+        input.close();
     }
-
-    @Override
-    public void displayInfo() {
-        System.out.println("Accessory Type: " + accessory);
-        super.displayInfo();
-    }
-
 }
 ```
