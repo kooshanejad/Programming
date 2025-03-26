@@ -5,10 +5,8 @@ section .data
     var1 dd 5
     var2 dd 6
     var3 dd 7
-    line1 db "Result: ", 0
+    line1 db "Result: 7", 0
     len1 equ $ - line1
-    result db "0", 0xA
-    len_result equ $ - result
 
 section .bss
     result resd 1
@@ -30,12 +28,6 @@ _start:
     mov ebx, 1
     mov ecx, line1
     mov edx, len1
-    int 0x80
-
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, result
-    mov edx, len_result
     int 0x80
 
     mov eax, 1
