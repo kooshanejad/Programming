@@ -329,7 +329,7 @@ public class Main {
 
 public class InvalidInputException extends Exception {
     public InvalidInputException(String message) {
-        super(message);  // Call the constructor of Exception class
+        super(message);
     }
 }
 
