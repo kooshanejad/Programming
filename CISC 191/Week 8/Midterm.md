@@ -47,6 +47,7 @@ public class Main {
         bandage.displayInfo();
         equipment.displayInfo();
 
+        input.close();
     }
 }
 
@@ -184,7 +185,7 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
-            input.close(); // Don't forget to close the scanner!
+            input.close();
         }
     }
 }
@@ -321,6 +322,8 @@ public class Main {
             painkiller.displayInfo();
             bandage.displayInfo();
             equipment.displayInfo();
+
+            input.close();
     }
 }
 
