@@ -1,7 +1,7 @@
 # Conditional Instructions
 
 1. Flowchart:   
-
+![Conditional Instructions](https://github.com/user-attachments/assets/6b70ffd8-b01d-4ea7-a6a6-b539c4556bef)
 2. My main challenge in performing this lab was making a plan of what I needed to do to compare the numbers and find the largest one.
 3.
 ```asm
