@@ -5,6 +5,16 @@
 2. My main challenge in performing this lab was making a plan of what I needed to do to compare the numbers and find the largest one.
 3.
 ```asm
+section .data
+    num1 dd 2
+    num2 dd 4
+    num3 dd 8
+    num4 dd 12
+    num5 dd 20
+
+section .bss
+    largest resd 1
+
 section .text
     global _start
 
