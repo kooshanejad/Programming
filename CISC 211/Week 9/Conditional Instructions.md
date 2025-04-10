@@ -3,7 +3,8 @@
 1. Flowchart:   
 
 2. My main challenge in performing this lab was making a plan of what I needed to do to compare the numbers and find the largest one.
-3. ```asm
+3.
+```asm
 section .text
     global _start
 
