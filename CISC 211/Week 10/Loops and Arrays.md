@@ -1,4 +1,8 @@
 # Loops and Arrays
+1. Flowchart:   
+
+2. This lab was honestly pretty challenging at first. I had to make plans of what I needed to do for each task in order to make it easier.
+3. Code:
 
 ```asm
 section .data
