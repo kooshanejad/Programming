@@ -2,8 +2,48 @@
 1. Flowchart:   
 
 2. This lab was honestly pretty challenging at first. I had to make plans of what I needed to do for each task in order to make it easier.
-3. Code:
+3. Code:   
+Task 1:
+```asm
+section .text
+    global _start
 
+_start:
+    mov ecx, 10   ;using ecx as counter register
+    xor ebx, ebx  ;clear out ebx
+
+label:
+    inc ebx
+    loop label
+
+    mov eax, 1    ;exit code
+    int 0x80
+```
+
+Task 2:
+```asm
+section .text
+    global _start
+
+_start:
+    xor eax, eax  ;clear out all registers before us
+    xor ebx, ebx
+    xor ecx, ecx
+    mov eax, 0
+    mov ebx, 1
+    mov ecx, 10   ;looping 10 times         
+
+label:
+    mov edx, eax  ;holding onto previous index
+    add eax, ebx  ;ebx + eax
+    mov edx, ebx  ;move ebx into edx
+    loop label 
+
+    mov eax, 1
+    int 0x80
+```
+
+Task 3:
 ```asm
 section .data
     array dd 3, 8, 7, 10  ;array of 4 integers (4 bytes each)
