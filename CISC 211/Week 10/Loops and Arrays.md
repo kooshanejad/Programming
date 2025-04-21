@@ -1,9 +1,8 @@
 # Loops and Arrays
 1. Flowchart:   
-
+![Loops and Arrays](https://github.com/user-attachments/assets/9cd5b537-6eea-4676-911c-698838b96635)
 2. This lab was honestly pretty challenging at first. I had to make plans of what I needed to do for each task in order to make it easier.
-3. Code:   
-Task 1:
+3. Task 1:
 ```asm
 section .text
     global _start
