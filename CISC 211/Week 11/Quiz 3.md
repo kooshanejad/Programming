@@ -18,7 +18,7 @@ _start:
 loop:
     cmp eax, 1
     jl done         ;jump to done if eax is less than 1
-    mul eax         ;ebx * eax        
+    imul ebx, eax   ;ebx * eax        
     mov ebx, eax    ;move result back to ebx
     dec eax
     jmp loop        ;repeat loop
