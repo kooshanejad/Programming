@@ -118,13 +118,15 @@ public class SalaryCalcFrame extends JFrame implements ActionListener {
 
 import javax.swing.JFrame;
 
-public static void main(String[] args) {
-    // Creates SalaryLabelFrame and its components
-    SalaryCalcFrame myFrame = new SalaryCalcFrame();
+public class SalaryDemo {
+    public static void main(String[] args) {
+        // Creates SalaryLabelFrame and its components
+        SalaryCalcFrame myFrame = new SalaryCalcFrame();
 
-    myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    myFrame.pack();
-    myFrame.setVisible(true);
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.pack();
+        myFrame.setVisible(true);
+    }
 }
 ```
 
@@ -273,7 +275,7 @@ public class DistanceCalcFrame extends JFrame implements ActionListener {
 
 import javax.swing.JFrame;
 
-public class Main {
+public class DistanceDemo {
     public static void main(String[] args) {
         DistanceCalcFrame myFrame = new DistanceCalcFrame();
 
