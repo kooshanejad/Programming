@@ -127,3 +127,158 @@ public static void main(String[] args) {
     myFrame.setVisible(true);
 }
 ```
+
+Activity 2:
+```java
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.NumberFormat;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JFormattedTextField;
+import javax.swing.JButton;
+
+public class DistanceCalcFrame extends JFrame implements ActionListener {
+    private JButton calcButton;              // triggers distance conversion
+    private JLabel milesLabel;               // label for miles
+    private JLabel kmLabel;                  // label for kilometers
+    private JLabel metersLabel;                   // label for meters
+    private JLabel feetLabel;                // label for feet
+    private JFormattedTextField milesField;  // holds miles input
+    private JTextField kmField;              // displays kilometers
+    private JTextField metersField;               // displays meters
+    private JTextField feetField;            // displays feet
+
+    /* Constructor creates GUI components and adds GUI components
+    using a GridBagLayout. */
+    DistanceCalcFrame() {
+        // Used to specify GUI component layout
+        GridBagConstraints layoutConst = null;
+
+        // Set frame title
+        setTitle("Distance Conversion Calculator");
+
+        // Create labels
+        milesLabel = new JLabel("Distance (miles):");
+        kmLabel = new JLabel("Distance (kilometers):");
+        metersLabel = new JLabel("Distance (meters):");
+        feetLabel = new JLabel("Distance (feet): ");
+
+        // Create button and add ActionListener
+        calcButton = new JButton("Calculate");
+        calcButton.addActionListener(this);
+
+        // Create and set up an input field for numbers
+        milesField = new JFormattedTextField(NumberFormat.getNumberInstance());
+        milesField.setEditable(true);
+        milesField.setText("0");
+        milesField.setColumns(15);
+
+        // Create kilometer field
+        kmField = new JTextField(15);
+        kmField.setEditable(false);
+
+        // Create meter field
+        metersField = new JTextField(15);
+        metersField.setEditable(false);
+
+        //Create feet field
+        feetField = new JTextField(15);
+        feetField.setEditable(false);
+
+        // Use a GridBagLayout
+        setLayout(new GridBagLayout());
+
+        //Specify component's grid location
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 10, 10, 1);
+        layoutConst.gridx = 0;
+        layoutConst.gridy = 0;
+        add(milesLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 1, 10, 10);
+        layoutConst.gridx = 1;
+        layoutConst.gridy = 0;
+        add(milesField, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 5, 10, 10);
+        layoutConst.gridx = 2;
+        layoutConst.gridy = 0;
+        add(calcButton, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 0, 1, 10);
+        layoutConst.gridx = 1;
+        layoutConst.gridy = 1;
+        add(kmLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(1, 0, 10, 10);
+        layoutConst.gridx = 1;
+        layoutConst.gridy = 2;
+        add(kmField, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 0, 1, 10);
+        layoutConst.gridx = 2;
+        layoutConst.gridy = 1;
+        add(metersLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(1, 0, 10, 10);
+        layoutConst.gridx = 2;
+        layoutConst.gridy = 2;
+        add(metersField, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 0, 1, 10);
+        layoutConst.gridx = 3;
+        layoutConst.gridy = 1;
+        add(feetLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(1, 0, 10, 10);
+        layoutConst.gridx = 3;
+        layoutConst.gridy = 2;
+        add(feetField, layoutConst);
+    }
+    /* Method is automatically called when an event occurs */
+    @Override
+    public void actionPerformed(ActionEvent event) {
+        double miles;
+        double km;
+        double meters;
+        double feet;
+
+        // Get value from miles field
+        miles = ((Number) milesField.getValue()).doubleValue();
+
+        // Convert miles to km, m, and ft
+        km = miles / 0.621371;
+        meters = miles / 0.000621371;
+        feet = miles / 0.0001893939;
+
+        kmField.setText(Double.toString(km));
+        metersField.setText(Double.toString(meters));
+        feetField.setText(Double.toString(feet));
+    }
+}
+
+import javax.swing.JFrame;
+
+public class Main {
+    public static void main(String[] args) {
+        DistanceCalcFrame myFrame = new DistanceCalcFrame();
+
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.pack();
+        myFrame.setVisible(true);
+    }
+}
+```
