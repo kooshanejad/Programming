@@ -143,6 +143,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JFormattedTextField;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 public class DistanceCalcFrame extends JFrame implements ActionListener {
     private JButton calcButton;              // triggers distance conversion
@@ -261,15 +262,20 @@ public class DistanceCalcFrame extends JFrame implements ActionListener {
         // Get value from miles field
         miles = ((Number) milesField.getValue()).doubleValue();
 
-        // Convert miles to km, m, and ft
-        km = miles / 0.621371;
-        meters = miles / 0.000621371;
-        feet = miles / 0.0001893939;
+        if (miles >= 0.0) {
+            // Convert miles to km, m, and ft
+            km = miles / 0.621371;
+            meters = miles / 0.000621371;
+            feet = miles / 0.0001893939;
 
-        // Convert doubles to Strings and display them in their fields
-        kmField.setText(Double.toString(km));
-        metersField.setText(Double.toString(meters));
-        feetField.setText(Double.toString(feet));
+            // Convert doubles to Strings and display them in their fields
+            kmField.setText(Double.toString(km));
+            metersField.setText(Double.toString(meters));
+            feetField.setText(Double.toString(feet));
+        } else {
+            // Show failure dialog
+            JOptionPane.showMessageDialog(this, "Enter a positive distance value!");
+        }
     }
 }
 
