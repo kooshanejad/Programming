@@ -146,11 +146,11 @@ public class DistanceCalcFrame extends JFrame implements ActionListener {
     private JButton calcButton;              // triggers distance conversion
     private JLabel milesLabel;               // label for miles
     private JLabel kmLabel;                  // label for kilometers
-    private JLabel metersLabel;                   // label for meters
+    private JLabel metersLabel;              // label for meters
     private JLabel feetLabel;                // label for feet
     private JFormattedTextField milesField;  // holds miles input
     private JTextField kmField;              // displays kilometers
-    private JTextField metersField;               // displays meters
+    private JTextField metersField;          // displays meters
     private JTextField feetField;            // displays feet
 
     /* Constructor creates GUI components and adds GUI components
@@ -264,6 +264,7 @@ public class DistanceCalcFrame extends JFrame implements ActionListener {
         meters = miles / 0.000621371;
         feet = miles / 0.0001893939;
 
+        // Convert doubles to Strings and display them in their fields
         kmField.setText(Double.toString(km));
         metersField.setText(Double.toString(meters));
         feetField.setText(Double.toString(feet));
