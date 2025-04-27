@@ -3,7 +3,7 @@
 ## Activity 10-11.1
 
 1. Flowchart:   
-
+![GUI 10-11 1](https://github.com/user-attachments/assets/c027be1d-cc71-46f5-84ee-38f63dca33b8)
 2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
 3. Video:
 4. Code:
