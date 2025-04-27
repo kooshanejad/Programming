@@ -1,6 +1,12 @@
 # GUI
 
-Activity 1:
+## Activity 10-11.1
+
+1. Flowchart:
+
+2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
+3. Video:
+4. Code:
 ```java
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -130,7 +136,13 @@ public class SalaryDemo {
 }
 ```
 
-Activity 2:
+## Activity 10-11.2
+
+1. Flowchart:
+
+2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
+3. Video:
+4. Code:
 ```java
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -292,7 +304,13 @@ public class DistanceDemo {
 }
 ```
 
-Activity 3:
+## Activity 10-11.3
+
+1. Flowchart:
+
+2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
+3. Video:
+4. Code:
 ```java
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
