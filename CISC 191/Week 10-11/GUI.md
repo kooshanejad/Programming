@@ -291,3 +291,184 @@ public class DistanceDemo {
     }
 }
 ```
+
+Activity 3:
+```java
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class DistanceCalcFrame extends JFrame implements ChangeListener {
+    private JSpinner distanceSpinner;  // Triggers travel time calculation
+    private JLabel milesLabel;         // Label for miles
+    private JLabel kmLabel;            // Label for kilometers
+    private JTextField kmField;        // Displays distance in kilometers
+
+    /* Constructor creates GUI components and adds GUI components
+    using a GridBagLayout. */
+    DistanceCalcFrame() {
+        int initMiles;     // Spinner initial value display
+        int minMiles;  // Spinner min value
+        int maxMiles;  // Spinner max value
+        int stepVal;   // Spinner step
+
+        initMiles = 0;
+        minMiles = 0;
+        maxMiles = 30;
+        stepVal = 1;
+
+        // Used to specify GUI component layout
+        GridBagConstraints layoutConst = null;
+
+        // Specifies the types of values displayed in spinner
+        SpinnerNumberModel spinnerModel = null;
+
+        // Set frame's title
+        setTitle("Distance Conversion Calculator");
+
+        // Create labels
+        milesLabel = new JLabel("Select distance (miles):");
+        kmLabel = new JLabel("Distance (km):");
+
+        // Create a spinner model, the spinner, and set the ChangeListener
+        spinnerModel = new SpinnerNumberModel(initMiles, minMiles, maxMiles, stepVal);
+        distanceSpinner = new JSpinner(spinnerModel);
+        distanceSpinner.addChangeListener(this);
+
+        // Create field
+        kmField = new JTextField(15);
+        kmField.setEditable(false);
+        kmField.setText("0");
+
+        // Use a GridBagLayout
+        setLayout(new GridBagLayout());
+
+        // Specify component's grid location
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 10, 10, 1);
+        layoutConst.anchor = GridBagConstraints.LINE_END;
+        layoutConst.gridx = 0;
+        layoutConst.gridy = 0;
+        add(milesLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 1, 10, 10);
+        layoutConst.fill = GridBagConstraints.HORIZONTAL;
+        layoutConst.gridx = 1;
+        layoutConst.gridy = 0;
+        add(distanceSpinner, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 10, 10, 1);
+        layoutConst.anchor = GridBagConstraints.LINE_END;
+        layoutConst.gridx = 0;
+        layoutConst.gridy = 1;
+        add(kmLabel, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 1, 10, 10);
+        layoutConst.fill = GridBagConstraints.HORIZONTAL;
+        layoutConst.gridx = 1;
+        layoutConst.gridy = 1;
+        add(kmField, layoutConst);
+    }
+
+    @Override
+    public void stateChanged(ChangeEvent event) {
+        Integer miles;     // Dog age input
+
+        miles = (Integer) distanceSpinner.getValue();
+
+        // Choose output based on dog's age component
+        switch (miles) {
+            case 0:
+                kmField.setText("0-15");
+                break;
+
+            case 1:
+                kmField.setText("1.6093");
+                break;
+
+            case 2:
+                kmField.setText("3.2187");
+                break;
+
+            case 3:
+                kmField.setText("4.8280");
+                break;
+
+            case 4:
+                kmField.setText("6.4374");
+                break;
+
+            case 5:
+                kmField.setText("8.0467");
+                break;
+
+            case 6:
+                kmField.setText("9.6561");
+                break;
+
+            case 7:
+                kmField.setText("11.2654");
+                break;
+
+            case 8:
+                kmField.setText("12.8748");
+                break;
+
+            case 9:
+                kmField.setText("14.4841");
+                break;
+
+            case 10:
+                kmField.setText("16.0934");
+                break;
+
+            case 11:
+                kmField.setText("17.7028");
+                break;
+
+            case 12:
+                kmField.setText("19.3121");
+                break;
+
+            case 13:
+                kmField.setText("20.9215");
+                break;
+
+            case 14:
+                kmField.setText("22.5308");
+                break;
+
+            case 15:
+                kmField.setText("24.1402");
+                break;
+
+            default:
+                kmField.setText("That's a long distance!");
+        }
+    }
+}
+
+import javax.swing.JFrame;
+
+public class DistanceDemo {
+    /* Creates a DistanceCalcFrame and makes it visible */
+    public static void main(String[] args) {
+        // Creates DistanceCalcFrame and its components
+        DistanceCalcFrame myFrame = new DistanceCalcFrame();
+
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.pack();
+        myFrame.setVisible(true);
+    }
+}
+```
