@@ -2,7 +2,7 @@
 
 ## Activity 10-11.1
 
-1. Flowchart:
+1. Flowchart:   
 
 2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
 3. Video:
