@@ -311,7 +311,7 @@ public class DistanceDemo {
 1. Flowchart:   
 ![GUI 10-11 3](https://github.com/user-attachments/assets/519e2a1e-9f3b-4d51-b434-8d85d94aa545)
 2. While performing this lab, my main challenge was learning the syntax for JSpinner, SpinnerNumberModel, ChangeEvent, and ChangeListener.
-3. Video:
+3. Video: https://youtu.be/4xzOJXiv8K4
 4. Code:
 ```java
 import java.awt.GridBagConstraints;
