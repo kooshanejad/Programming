@@ -141,7 +141,7 @@ public class SalaryDemo {
 1. Flowchart:   
 ![GUI 10-11 2](https://github.com/user-attachments/assets/44d37dc2-4846-43e8-92d4-9f3eaf7ec0af)
 2. While performing this lab, my main challenge was learning the syntax for NumberFormat, JFormattedTextField, and JButton.
-3. Video:
+3. Video: https://youtu.be/5iyicxJN4LQ
 4. Code:
 ```java
 import java.awt.GridBagConstraints;
