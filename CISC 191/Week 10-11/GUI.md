@@ -138,9 +138,9 @@ public class SalaryDemo {
 
 ## Activity 10-11.2
 
-1. Flowchart:
-
-2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
+1. Flowchart:   
+![GUI 10-11 2](https://github.com/user-attachments/assets/44d37dc2-4846-43e8-92d4-9f3eaf7ec0af)
+2. While performing this lab, my main challenge was learning the syntax for NumberFormat, JFormattedTextField, and JButton.
 3. Video:
 4. Code:
 ```java
@@ -293,8 +293,10 @@ public class DistanceCalcFrame extends JFrame implements ActionListener {
 
 import javax.swing.JFrame;
 
-public class DistanceDemo {
+public class DistanceDemo { 
+    /* Creates a DistanceCalcFrame and makes it visible */
     public static void main(String[] args) {
+        // Creates DistanceCalcFrame and its components
         DistanceCalcFrame myFrame = new DistanceCalcFrame();
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -306,9 +308,9 @@ public class DistanceDemo {
 
 ## Activity 10-11.3
 
-1. Flowchart:
-
-2. While performing this lab, my main challenge was figuring out the syntax for the new code we learned, such as JLabel, JTextField, GridBagConstraints, etc.
+1. Flowchart:   
+![GUI 10-11 3](https://github.com/user-attachments/assets/519e2a1e-9f3b-4d51-b434-8d85d94aa545)
+2. While performing this lab, my main challenge was learning the syntax for JSpinner, SpinnerNumberModel, ChangeEvent, and ChangeListener.
 3. Video:
 4. Code:
 ```java
@@ -400,11 +402,11 @@ public class DistanceCalcFrame extends JFrame implements ChangeListener {
 
     @Override
     public void stateChanged(ChangeEvent event) {
-        Integer miles;     // Dog age input
+        Integer miles;     // miles input
 
         miles = (Integer) distanceSpinner.getValue();
 
-        // Choose output based on dog's age component
+        // Choose output based on miles component
         switch (miles) {
             case 0:
                 kmField.setText("0-15");
