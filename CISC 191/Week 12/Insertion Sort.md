@@ -60,6 +60,7 @@ public class InsertionSort {
          System.out.println();
 
          insertionSort(array);
+         input.close();
     }
 }
 ``` 
