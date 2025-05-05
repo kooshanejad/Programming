@@ -3,7 +3,7 @@
 1. Flowchart:   
 ![Insertion Sort](https://github.com/user-attachments/assets/26cab6e3-7dd6-45a9-accb-aad0ed82c633)
 2. My main challenge in this lab was figuring out how the insertion sort algorithm worked based on the lecture and adjusting it to fit the requirements for the lab.
-3. Video:
+3. Video: https://youtube.com/shorts/F6XIa33FUR8?feature=share
 4. Code:
 ```java
 import java.util.Scanner;
