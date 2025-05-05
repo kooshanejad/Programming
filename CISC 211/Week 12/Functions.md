@@ -1,7 +1,7 @@
 # Functions
 
 1. Flowchart:   
-
+![Functions](https://github.com/user-attachments/assets/aab3f684-406f-4d9b-881e-2fbd635eeb1d)
 2. This lab was pretty simple. I didn't really face any major challenges.
 3. Code:
 ```asm
@@ -24,7 +24,7 @@ _start:
 ; Function: check_even_odd
 ; Input: eax = number to check
 check_even_odd:
-    test eax, 1           ; Bitwise AND operation to check it even or odd
+    test eax, 1           ; Bitwise AND operation to check if even or odd
     jz print_even         ; If zero, number is even
     jmp print_odd         ; Else, it's odd
 
