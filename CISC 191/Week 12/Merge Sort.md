@@ -1,7 +1,7 @@
 # Merge Sort
 
-1. Flowchart:
-
+1. Flowchart:   
+![Merge Sort](https://github.com/user-attachments/assets/12d1b921-0695-4991-94cb-a57c2e9a6d27)
 2. My main challenge in this lab was figuring out how the merge sort algorithm works using the example code from the lecture and then adjusting the code to fit the requirements for the lab.
 3. Video:
 4. Code:
