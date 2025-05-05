@@ -7,7 +7,7 @@
 ```asm
 section .data
     even_msg db "Even", 10        ; Message + newline
-    even_len equ $ - even_msg
+    even_len equ $ - even_msg     ; Calculate string length
 
     odd_msg db "Odd", 10
     odd_len equ $ - odd_msg
