@@ -49,7 +49,7 @@ public class MergeSort {
             ++mergePos;
         }
 
-        // Copy merge number back to numbers
+        // Copy merge number back to array
         for (mergePos = 0; mergePos < mergedSize; ++mergePos) {
             array[i + mergePos] = mergedNumbers[mergePos];
         }
