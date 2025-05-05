@@ -1,7 +1,7 @@
 # Insertion Sort
 
 1. Flowchart:   
-
+![Insertion Sort](https://github.com/user-attachments/assets/26cab6e3-7dd6-45a9-accb-aad0ed82c633)
 2. My main challenge in this lab was figuring out how the insertion sort algorithm worked based on the lecture and adjusting it to fit the requirements for the lab.
 3. Video:
 4. Code:
@@ -13,6 +13,7 @@ public class InsertionSort {
         int comparisons = 0;
         int swaps = 0;
 
+        // Perform insertion sort on array
         for (int i = 1; i < array.length; ++i) {
             int j = i;
             while (j > 0) {
