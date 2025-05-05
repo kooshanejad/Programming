@@ -96,6 +96,8 @@ public class MergeSort {
         }
 
         System.out.println("\ncomparisons: " + comparisons);
+
+        input.close();
     }
 }
 ```
