@@ -1,6 +1,6 @@
 # File Management
 
-1. My challenges in performing this lab were first figuring out 
+1. My challenges in performing this lab were figuring out how to create, open, write to, and close a file.
 2. Code:
 ```asm
 section .data
@@ -17,8 +17,20 @@ section .data
 
 section .text
     global _start
+
+_start:
+    ; create a file
+    mov ecx, 0711o    ; file permissions
+    mov ebx, file     ; file name being created
+    mov eax, 8        ; invoke SYS_CREAT
+    int 0x80          ; call kernel
+
+    ; open file
+    mov eax, 5        ; call sys_open()
+    mov ebx, file
+    mov ecx, 0x241    ; flags: 0_WRONLY | 0_CREAT | 0_APPEND
     mov edx, 0644     ; permissions: rw-r--r--
-    int 0x80          
+    int 0x80         
 
     mov esi, eax      ; store file descriptor which allows stdin, stdout, and stderr
 
@@ -38,30 +50,15 @@ section .text
 
     ; seek to end of file before appending quote3 and quote4
     mov eax, 19       ; sys_lseek  
-    mov edx, len1     ; get message length
-    int 0x80
-    mov edx, 2        ; SEEK_END (start counting from end of file)
-
-    ; write second quote
-    mov eax, 4                   
-    mov ebx, esite3 
-    mov ecx, quote2
-    mov edx, len2
-    int 0x80 quote3
-    mov edx, len3
-
-    ; seek to end of file before appending quote3 and quote4
-    mov eax, 19       ; sys_lseek  
     mov ebx, esi      ; file descriptor
     mov ecx, 0        ; offset 0    
     mov edx, 2        ; SEEK_END (start counting from end of file)
-    int 0x80 quote4
-    mov edx, len4
+    int 0x80
 
-    ; append quote3 
+    ; append quote3
     mov eax, 4
     mov ebx, esi
-    mov ecx, quote3   ; sys_close
+    mov ecx, quote3
     mov edx, len3
     int 0x80
 
