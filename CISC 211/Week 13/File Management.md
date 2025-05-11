@@ -1,5 +1,7 @@
 # File Management
 
+1. My challenges in performing this lab were first figuring out 
+2. Code:
 ```asm
 section .data
     file db 'quotes.txt', 0h ; create file
@@ -39,6 +41,7 @@ section .text
     mov edx, len1     ; get message length
     int 0x80
     mov edx, 2        ; SEEK_END (start counting from end of file)
+
     ; write second quote
     mov eax, 4                   
     mov ebx, esite3 
@@ -46,6 +49,7 @@ section .text
     mov edx, len2
     int 0x80 quote3
     mov edx, len3
+
     ; seek to end of file before appending quote3 and quote4
     mov eax, 19       ; sys_lseek  
     mov ebx, esi      ; file descriptor
@@ -53,6 +57,7 @@ section .text
     mov edx, 2        ; SEEK_END (start counting from end of file)
     int 0x80 quote4
     mov edx, len4
+
     ; append quote3 
     mov eax, 4
     mov ebx, esi
