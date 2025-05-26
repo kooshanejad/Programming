@@ -1,5 +1,8 @@
 # Project
 
+1. Flowchart:   
+![Project](https://github.com/user-attachments/assets/fbcf36f4-234b-4822-84ae-424cfb595c32)
+2. Code:
 ```asm
 section .data
     message     db "HELLO"          ; Plaintext message
@@ -94,3 +97,4 @@ newline_out:
     int 0x80
     ret
 ```
+3. Video: 
