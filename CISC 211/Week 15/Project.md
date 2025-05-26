@@ -97,4 +97,4 @@ newline_out:
     int 0x80
     ret
 ```
-3. Video: 
+3. Video: https://youtu.be/G64vgFXq2Cw
