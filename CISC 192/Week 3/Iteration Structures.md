@@ -3,6 +3,7 @@
 Screenshot:   
 
 Code:   
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -53,3 +54,4 @@ int main() {
     // exit program
     return 0;
 }
+```
