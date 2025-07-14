@@ -1,54 +1,5 @@
 # Functions and Argument Declarations
 
-Screenshot:
-Video:
-
-```cpp
-#include <iostream>
-#include <string>
-using namespace std;
-
-// Function to return the sum of two integers
-int sum(int a, int b) {
-    return a + b;
-}
-
-// Function to return the square of an integer
-int square(int num) {
-    return num * num;
-}
-
-// Function to print a personalized greeting
-void greet(string name) {
-    cout << "Hello, " << name << "! Welcome to C++ functions." << endl;
-}
-
-int main() {
-    int num1, num2;
-    string name;
-
-    // Prompt user for first number
-    cout << "Enter first number: ";
-    cin >> num1;
-
-    // Prompt user for second number
-    cout << "Enter second number: ";
-    cin >> num2;
-
-    // Call sum function and display result
-    cout << "Sum: " << sum(num1, num2) << endl;
-
-    // Call square function using the first input
-    cout << "Square of " << num1 << ": " << square(num1) << endl;
-
-    // Prompt user for their name
-    cout << "Enter your name: ";
-    cin >> name;
-
-    // Call greet function
-    greet(name);
-
-    return 0;
-}
-
-```
+Screenshot:   
+<img width="572" height="236" alt="Screen Shot 2025-07-13 at 9 09 16 PM" src="https://github.com/user-attachments/assets/f12a9aa6-307b-4bf3-a365-b474514e8e91" />   
+Video: https://youtu.be/7iqLEdN7n9M
