@@ -140,15 +140,13 @@ void menu() {
          << "Choose: ";
 }
 
-// ===============================
-// MAIN PROGRAM
-// ===============================
+
 int main() {
-    Student roster[MAX_STUDENTS]; // 6) Arrays
+    Student roster[MAX_STUDENTS]; // Arrays
     int count = 0;                // number of students entered
 
     bool running = true;
-    while (running) {              // 3) Iteration (looping menu)
+    while (running) {              // Iteration (looping menu)
         menu();
         int choice;
         if (!(cin >> choice)) { // input validation
@@ -160,8 +158,13 @@ int main() {
 
         // Simple menu-driven program
         switch (choice) {
+            // Asks user for the student's name and grades, calculates the average, and stores the student in the
+            // roster array
             case 1: addStudent(roster, count); break;
+            // Prints out all students currently stored in the array
             case 2: listStudents(roster, count); break;
+            // Asks user for file name, calls saveToFile(roster, count, path)
+            // If saving worked, prints "Saved."; if saving failed, prints "Save failed."
             case 3: {
                 string path;
                 cout << "Save path (e.g., students.txt): ";
