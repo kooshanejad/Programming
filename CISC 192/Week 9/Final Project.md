@@ -15,7 +15,7 @@ const double PASS_THRESHOLD = 60.0; // minimum average to pass
 
 // Struct to represent one student
 struct Student {
-    string name;                  // Strings to store names
+    string name;                  // String to store names
     int numGrades = 0;            // number of grades entered
     double grades[MAX_GRADES]{};  // Array of grades
     double average = 0.0;         // average grade
