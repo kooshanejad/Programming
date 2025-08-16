@@ -22,9 +22,7 @@ struct Student {
     char letter = 'F';            // letter grade
 };
 
-// ===============================
 // FUNCTIONS
-// ===============================
 
 // Function with pointer parameter
 // Computes the average of a grade array
@@ -140,6 +138,7 @@ void menu() {
          << "Choose: ";
 }
 
+// MAIN PROGRAM
 
 int main() {
     Student roster[MAX_STUDENTS]; // Arrays
