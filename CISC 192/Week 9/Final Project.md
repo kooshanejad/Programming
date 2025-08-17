@@ -26,11 +26,11 @@ struct Student {
 
 // Function with pointer parameter
 // Computes the average of a grade array
-double computeAverage(const double* arr, int n) { // 5) Pointers used here
+double computeAverage(const double* arr, int n) { // Pointers used here
     if (n <= 0) return 0.0;
     double sum = 0.0;
-    for (int i = 0; i < n; ++i) { // 3) Iteration
-        sum += arr[i];            // 1) Arithmetic
+    for (int i = 0; i < n; ++i) { // Iteration
+        sum += arr[i];            // Arithmetic
     }
     return sum / n;
 }
@@ -67,9 +67,13 @@ void addStudent(Student roster[], int& count) { // Arrays, pointer decay
     }
 
     Student s; // Temporary student
+
+
+
     cout << "Enter student name (can include spaces): ";
     getline(cin, s.name); // Use getline for full names
 
+    // Asks user "How many grades?" and reads answer; if too low, set to 0; if too high, cap at maximum
     cout << "How many grades (0-" << MAX_GRADES << ")? ";
     cin >> s.numGrades;
     if (s.numGrades < 0) s.numGrades = 0;
@@ -100,7 +104,7 @@ void listStudents(const Student roster[], int count) {
 
     // Example of pointer iteration
     const Student* p = roster; // Pointer to first student
-    for (int i = 0; i < count; ++i, ++p) { // 3) Iteration
+    for (int i = 0; i < count; ++i, ++p) { // Iteration
         cout << "[" << i << "] ";
         printStudent(*p); // Dereference pointer
     }
@@ -108,13 +112,17 @@ void listStudents(const Student roster[], int count) {
 
 // Files — saves data to a plain text file
 bool saveToFile(const Student roster[], int count, const string& path) {
-    ofstream out(path);
-    if (!out) return false;
+    ofstream out(path);      // open file for writing
+    if (!out) return false;  // checks if file failed to open, returns false if it failed
 
-    out << "Student Grade Tracker (simple format)\n";
-    out << "COUNT " << count << "\n";
+    out << "Student Grade Tracker (simple format)\n";   // title line
+    out << "COUNT " << count << "\n";                   // how many students are stored
 
-    for (int i = 0; i < count; ++i) {
+
+// iterate over every student in roster array, write their
+// name, how many grades they have, and their grades
+    for (int i = 0; i < count; ++i) {              
+
         out << "NAME " << roster[i].name << "\n";
         out << "N " << roster[i].numGrades << "\n";
         out << "GRADES ";
