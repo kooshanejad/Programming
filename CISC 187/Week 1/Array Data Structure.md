@@ -8,12 +8,19 @@ In this line of code, "int" means that the data type for the array is integers. 
 ```cpp
 sizeof(int)
 ``` 
-For an array containing 100 elements, provide the number of steps the following operations would take: (theoretical) - 6 pts  
-Reading  
-Searching for a value not contained within the array  
-Insertion at the beginning of the array  
-Insertion at the end of the array  
-Deletion at the beginning of the array  
-Deletion at the end of the array  
-Normally the search operation in an array looks for the first instance of a given value. But sometimes we may want to look for every instance of a given value. For example, say we want to count how many times the value “apple” is found inside an array. How many steps would it take to find all the “apples”? Give your answer in terms of N. (theoretical) - 1 pts  
-Research how to find the memory address of an array. You can use any programming language of your choice. (requires code) 1 pts  
+3. For an array containing 100 elements, provide the number of steps the following operations would take:  
+Reading: 1 step  
+Searching for a value not contained within the array: 100 steps  
+Insertion at the beginning of the array: 101 steps  
+Insertion at the end of the array: 1 step  
+Deletion at the beginning of the array: 99 steps  
+Deletion at the end of the array: 1 step  
+
+4. O(N) steps; even if the value appears early, you must still check all N elements to ensure every instance is counted.
+5.
+```cpp
+int arr[100];
+
+cout << arr << endl;
+cout << &arr[0] << endl;
+```
