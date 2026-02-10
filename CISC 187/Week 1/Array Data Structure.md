@@ -24,3 +24,5 @@ int arr[100];
 cout << arr << endl;
 cout << &arr[0] << endl;
 ```
+
+Video: https://sdccd.us-west-2.instructuremedia.com/embed/dd2a9120-d94c-4fdc-b6b5-941b9de5b599
