@@ -171,6 +171,9 @@ int binarySearch(const vector<int>& arr, int target, int& comparisons) {
             right = mid - 1;
         }
     }
+
+    // Return -1 if target is not found
+    return -1;
 }
 
 // Randomized search without repetition:
@@ -213,11 +216,6 @@ int randomizedSearch(const vector<int>& data, int target, int& comparisons) {
     return -1; // Target not found
 }
 
-
-    // Return -1 if target is not found
-    return -1;
-}
-
 int main() {
 
     // Create sorted dataset of 100,000 distinct elements
@@ -244,16 +242,18 @@ int main() {
     cout << "Binary search index: " << binaryIndex
          << ", comparisons: " << binaryComparisons << endl;
 
-// Track the # of comparisons made by the randomized search
-int randomComparisons = 0;
+    // Track the # of comparisons made by the randomized search
+    int randomComparisons = 0;
 
-// Perform randomized search on the same dataset and target
-int randomIndex = randomizedSearch(arr, target, randomComparisons);
+    // Perform randomized search on the same dataset and target
+    int randomIndex = randomizedSearch(arr, target, randomComparisons);
 
-// Output the results of the randomized search
-cout << "Randomized search index: " << randomIndex
-     << ", comparisons: " << randomComparisons << endl;
+    // Output the results of the randomized search
+    cout << "Randomized search index: " << randomIndex
+         << ", comparisons: " << randomComparisons << endl;
 
     return 0;  
 }
 ```
+
+Randomized search, linear search, and binary search differ mainly in time complexity, data requirements, and practical efficiency. Linear search and randomized search both work on unsorted data and have best-case time complexity of O(1), but average and worst-case time complexity of O(N). Randomized search examines elements in a random order without repetition, but it still performs about N/2 comparisons on average and up to N comparisons in the worst case, so it does not improve the overall time complexity compared to linear search. Binary search, on the other hand, requires the data to be sorted but runs in O(log N) time in both the average and worst cases, making it significantly more efficient for large datasets. In practice, linear search is simple and efficient for small or unsorted datasets. Binary search is preferred when the data is sorted and multiple searches will be performed, since it guarantees very fast lookups. Randomized search may be useful when a non-predictable access pattern is desired, but it generally offers no time complexity advantage over linear search and adds extra overhead for random index generation.
