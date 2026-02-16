@@ -64,4 +64,24 @@ int main() {
 
 The observed behavior matches the theoretical Big-O time complexities of the algorithms. Linear search exhibits O(N) complexity because, in the worst-case scenario, the algorithm must examine every element in the array before finding the target (or determining it is not present). As the array size increases, the number of comparisons increases proportionally. For example, in an array of 100,000 elements, linear search required 100,000 comparisons in the worst case. Therefore, its time complexity grows linearly in relation to N. Binary search, on the other hand, exhibits O(log N) complexity; instead of checking each element sequentially, binary search repeatedly divides the search space in half. With each iteration, half of the remaining elements are eliminated from the search. Since the array is sorted, this halving process significantly reduces the number of comparisons needed. In an array of 100,000 elements, binary search required only 17 comparisons in the worst case. Seeing as the number of steps increases logarithmically as N grows, the time complexity of binary search is O(log N).
 
-5.
+5. Pseudocode:
+randomized_search(A, target):
+    N = length(A)
+
+    // build index list
+    idx = [0, 1, 2, ..., N-1]
+
+    // shuffle idx (Fisher–Yates)
+    for i from N-1 down to 1:
+        j = random integer in [0, i]
+        swap idx[i] and idx[j]
+
+    comparisons = 0
+    for k from 0 to N-1:
+        comparisons = comparisons + 1
+        if A[idx[k]] == target:
+            return (idx[k], comparisons)
+
+    return (-1, comparisons)
+
+
