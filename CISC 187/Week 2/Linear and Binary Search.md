@@ -171,6 +171,7 @@ int binarySearch(const vector<int>& arr, int target, int& comparisons) {
             right = mid - 1;
         }
     }
+}
 
 // Randomized search without repetition:
 // 1) Build an index list [0..N-1]
