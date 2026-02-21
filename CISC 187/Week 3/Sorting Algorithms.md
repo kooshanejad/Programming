@@ -5,3 +5,5 @@
 3. This function loops through the array once to double each number and store it in a new array. That first loop runs N times, then it loops through the new array to compute the sum, which also runs N times. The total work is N + N = 2N; dropping the constant 2, the time complexity is O(N).
 4. This function loops through the array once. For each string, it performs three constant-time operations: upcase, downcase, and capitalize, and prints each result. Since these are constant-time operations relative to the number of elements in the array, each iteration is constant work. The loop runs N times, so the overall time complexity is O(N).
 5. This function first loops through the entire array, which takes N steps. For each element whose index is even, it runs a second loop over the entire array. Since that inner loop runs N times and is triggered about N/2 times, the total work is approximately N/2 * N, which simplifies to (N^2)/2. Dropping constants, the overall time complexity is O(N^2). 
+
+Video: https://youtu.be/gaTIuMSWVSw
