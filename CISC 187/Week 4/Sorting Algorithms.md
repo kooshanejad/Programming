@@ -32,6 +32,7 @@ Each "shift" fixes an inversion. For average or random outputs, the expected num
 ```
 [5, 4, 3, 2, 1]
 ```
+In the worst case, each element must be compared with all previously sorted elements, resulting in the following pattern:
 ```
 For N = 5 (worst case, descending order):
 
