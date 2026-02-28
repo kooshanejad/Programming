@@ -32,6 +32,28 @@ Each "shift" fixes an inversion. For average or random outputs, the expected num
 ```
 [5, 4, 3, 2, 1]
 ```
+```
+For N = 5 (worst case, descending order):
+
+i = 1: 1 comparison + 1 shift
+i = 2: 2 comparisons + 2 shifts
+i = 3: 3 comparisons + 3 shifts
+i = 4: 4 comparisons + 4 shifts
+
+Total comparisons = 1 + 2 + 3 + 4 = 10
+Total shifts      = 1 + 2 + 3 + 4 = 10
+Total operations  = 10 + 10 = 20
+```
 If the inspected index starts at 0 instead of 1, the first iteration does no comparisons. The remaining iterations in worst-case descending order still produce 10 comparisons and 10 shifts, totaling 20 operations.    
 3. (a) The function's time complexity regarding Big O Notation is O(N), since the loop may examine every character in the string.   
-(b) 
+(b) Modified code:   
+```cpp
+bool containsX(const std::string& str) {
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == 'X') {
+            return true;  // stop immediately when found
+        }
+    }
+    return false;
+}
+```
