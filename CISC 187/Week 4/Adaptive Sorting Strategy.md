@@ -167,3 +167,8 @@ int main() {
 }
 ```
 
+Part C:
+Threshold definition: I measured how ordered the array is by counting the number of adjacent pairs where A[i] > A[i+1]. I defined adjBad as the number of adjacent inversions. For N = 50, my definition for nearly sorted is when adjBad ≤ 2, my definition for the worst case scenario is when adjBad = N - 1 = 49, and my average case is if adjBad holds any other value.   
+Reasoning behind the assumption: Adjacent inversions are a fast O(N) way to estimate how close the array is to being sorted. If there are very few adjacent inversions, only a few elements are out of place, so insertion sort tends to perform close to its best case. If every adjacent pair is inverted, the input is strictly descending, which is insertion sort's worst case.   
+Why the program selects one algorithm over the other: If the array is already sorted or nearly sorted, the program selects insertion sort because insertion sort can run in O(N) time in the best case. If the array is strictly descending (worst case), the program selects selection sort because insertion sort performs many shifts in this scenario, while selection sort's behavior is consistent regardless of input order.
+How input order affects time complexity: Selection sort performs O(N^2) comparisons in best, average, and worst cases because it always scans the remaining unsorted portion to find the next minimum. Insertion sort is adaptive: its time complexity is O(N) in the best case when the array is already sorted, but it becomes O(N^2) in the average and worst cases because elements may need to shift many positions.
