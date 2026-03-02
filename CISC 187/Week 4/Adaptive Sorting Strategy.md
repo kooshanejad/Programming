@@ -13,7 +13,7 @@ static const int N = 50;
 static const int THRESH_NEARLY_SORTED = 2; // Threshold used to define "nearly sorted"
 
 // ------------------------------------------------------------
-// Count adjacent inversions (required for both Part A and Part B)
+// Count adjacent inversions (Part A and B)
 // ------------------------------------------------------------
 int countAdjacentInversions(const vector<int>& a) {
     int bad = 0;
@@ -24,7 +24,7 @@ int countAdjacentInversions(const vector<int>& a) {
 }
 
 // ------------------------------------------------------------
-// Classify case type (required for both Part A and Part B)
+// Classify case type (Part A and B)
 // ------------------------------------------------------------
 string classifyCase(int adjBad, int n) {
     if (adjBad == n - 1)
@@ -33,7 +33,7 @@ string classifyCase(int adjBad, int n) {
 }
 
 // ------------------------------------------------------------
-// Insertion Sort implementation (required for Part A)
+// Insertion Sort implementation (Part A)
 // ------------------------------------------------------------
 void insertionSort(vector<int>& a) {
     for (int i = 1; i < (int)a.size(); i++) {
@@ -48,7 +48,7 @@ void insertionSort(vector<int>& a) {
 }
 
 // ------------------------------------------------------------
-// Selection Sort implementation (required for Part A)
+// Selection Sort implementation (Part A)
 // ------------------------------------------------------------
 void selectionSort(vector<int>& a) {
     int n = (int)a.size();
@@ -75,7 +75,7 @@ void printArray(const vector<int>& a) {
 }
 
 // ------------------------------------------------------------
-// Shared input function (required for both Part A and Part B)
+// Shared input function (Part A and B)
 // ------------------------------------------------------------
 vector<int> read50Integers() {
     vector<int> a;
@@ -166,7 +166,7 @@ int main() {
 }
 ```
 
-Part C:
+## Part C
 Threshold definition: I measured how ordered the array is by counting the number of adjacent pairs where A[i] > A[i+1]. I defined adjBad as the number of adjacent inversions. I defined a threshold constant THRESH_NEARLY_SORTED = 2. For N = 50, the array is considered nearly sorted when adjBad ≤ THRESH_NEARLY_SORTED. The worst case scenario occurs when adjBad = N - 1 = 49. Any other value is classified as average case. 
 
 Reasoning behind the assumption: Adjacent inversions are a fast O(N) way to estimate how close the array is to being sorted. If there are very few adjacent inversions, only a few elements are out of place, so insertion sort tends to perform close to its best case. If every adjacent pair is inverted, the input is strictly descending, which is insertion sort's worst case.   
