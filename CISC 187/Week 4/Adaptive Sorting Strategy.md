@@ -1,5 +1,6 @@
 # Adaptive Sorting Strategy Lab
 
+## Part A and B
 ```cpp
 
 #include <iostream>
@@ -173,4 +174,6 @@ Reasoning behind the assumption: Adjacent inversions are a fast O(N) way to esti
 
 Why the program selects one algorithm over the other: If the array is already sorted or nearly sorted, the program selects insertion sort because insertion sort can run in O(N) time in the best case. If the array is strictly descending (worst case), the program selects selection sort because insertion sort performs many shifts in this scenario, while selection sort's behavior is consistent regardless of input order.   
 
-How input order affects time complexity: Selection sort performs O(N^2) comparisons in best, average, and worst cases because it always scans the remaining unsorted portion to find the next minimum. Insertion sort is adaptive: its time complexity is O(N) in the best case when the array is already sorted, but it becomes O(N^2) in the average and worst cases because elements may need to shift many positions.
+How input order affects time complexity: Selection sort performs O(N^2) comparisons in best, average, and worst cases because it always scans the remaining unsorted portion to find the next minimum. Insertion sort is adaptive: its time complexity is O(N) in the best case when the array is already sorted, but it becomes O(N^2) in the average and worst cases because elements may need to shift many positions
+
+Video: https://youtu.be/5ku3ZBLwxuE
