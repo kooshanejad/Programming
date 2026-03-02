@@ -27,9 +27,8 @@ int countAdjacentInversions(const vector<int>& a) {
 // Classify case type (required for both Part A and Part B)
 // ------------------------------------------------------------
 string classifyCase(int adjBad, int n) {
-    if (adjBad == 0) return "Best Case (already sorted)";
-    if (adjBad <= THRESH_NEARLY_SORTED) return "Best Case (nearly sorted)";
-    if (adjBad == n - 1) return "Worst Case (strictly descending)";
+    if (adjBad == n - 1)
+        return "Worst Case";
     return "Average Case";
 }
 
@@ -168,7 +167,7 @@ int main() {
 ```
 
 Part C:
-Threshold definition: I measured how ordered the array is by counting the number of adjacent pairs where A[i] > A[i+1]. I defined adjBad as the number of adjacent inversions. For N = 50, my definition for nearly sorted is when adjBad ≤ 2, my definition for the worst case scenario is when adjBad = N - 1 = 49, and my average case is if adjBad holds any other value.   
+Threshold definition: I measured how ordered the array is by counting the number of adjacent pairs where A[i] > A[i+1]. I defined adjBad as the number of adjacent inversions. I defined a threshold constant THRESH_NEARLY_SORTED = 2. For N = 50, the array is considered nearly sorted when adjBad ≤ THRESH_NEARLY_SORTED. The worst case scenario occurs when adjBad = N - 1 = 49. Any other value is classified as average case. 
 
 Reasoning behind the assumption: Adjacent inversions are a fast O(N) way to estimate how close the array is to being sorted. If there are very few adjacent inversions, only a few elements are out of place, so insertion sort tends to perform close to its best case. If every adjacent pair is inverted, the input is strictly descending, which is insertion sort's worst case.   
 
