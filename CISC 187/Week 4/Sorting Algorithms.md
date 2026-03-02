@@ -28,7 +28,7 @@ insert key at index 1
         [1, 2, 3, 4, 5]
 ```
 Each "shift" fixes an inversion. For average or random outputs, the expected number of inversions is N(N-1)/4, so insertion sort performs O(N^2) operations on average.   
-2. Worst case array:   
+2. a) Worst case array:   
 ```
 [5, 4, 3, 2, 1]
 ```
@@ -45,7 +45,19 @@ Total comparisons = 1 + 2 + 3 + 4 = 10
 Total shifts      = 1 + 2 + 3 + 4 = 10
 Total operations  = 10 + 10 = 20
 ```
-If the inspected index starts at 0 instead of 1, the first iteration does no comparisons. The remaining iterations in worst-case descending order still produce 10 comparisons and 10 shifts, totaling 20 operations.    
+If the inspected index starts at 0 instead of 1, the first iteration does no comparisons. The remaining iterations in worst-case descending order still produce 10 comparisons and 10 shifts, totaling 20 operations.   
+b)   
+```
+For N = 5, descending order, starting at i = 2 then i = 3:
+
+i = 2: 2 comparisons + 2 shifts
+i = 3: 3 comparisons + 3 shifts
+
+Total comparisons = 2 + 3 = 5
+Total shifts      = 2 + 3 = 5
+Total operations  = 10
+```
+c) No, for part b, the algorithm does not still sort the entire array. Starting at i = 2 skips the step that inserts A[1] into the sorted portion. Since insertion sort assumes that A[0..i-1] is already sorted, skipping i = 1 breaks that assumption. Therefore, the algorithm does not guarantee that the entire array will be sorted.   
 3. (a) The function's time complexity regarding Big O Notation is O(N), since the loop may examine every character in the string.   
 (b) Modified code:   
 ```cpp
