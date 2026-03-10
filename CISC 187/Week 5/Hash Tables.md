@@ -192,3 +192,5 @@ int main() {
 ## Part 6
 I tested the hash table using three different input types: random strings, sequential keys, and keys with the same prefix. For each test, I recorded the total number of collisions, the maximum bucket size, and the average bucket length. These values helped show how evenly the hash function distributed the keys across the table.   
 In general, the random strings produced the most even distribution because the keys were less similar to each other. The sequential keys also distributed reasonably well, but they sometimes created slightly more clustering. The same-prefix keys tended to be the most likely to group into similar buckets because many of the strings began with the same characters. This shows that input patterns can affect hash table performance, even when the hash function is designed to spread values across the table.
+
+Video: https://youtu.be/Y2FT7qVROmU
