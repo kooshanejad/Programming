@@ -2,8 +2,6 @@
 
 ## Task 1
 ```
-Task 1 — Stack Operations (S[1..6])
-
 Initial:
 [ _, _, _, _, _, _ ]    S.top = 0
 
@@ -27,8 +25,6 @@ POP(S):
 ```
 ## Task 2
 ```
-Task 2 — Queue Operations (Q[1..6])
-
 Initial:
 [ _, _, _, _, _, _ ]    Q.head = 1, Q.tail = 1
 
@@ -51,4 +47,74 @@ DEQUEUE(Q):
 [ 4, 1, 3, 8, _, _ ]    Q.head = 3, Q.tail = 5    (1 removed)
 ```
 ## Task 3
+```
+ENQUEUE(Q, x)
+
+if (Q.head == Q.tail + 1) or (Q.head == 1 and Q.tail == Q.length)
+    error "overflow"
+else
+    Q[Q.tail] = x
+    if Q.tail == Q.length
+        Q.tail = 1
+    else
+        Q.tail = Q.tail + 1
+
+DEQUEUE(Q)
+
+if Q.head == Q.tail
+    error "underflow"
+else
+    x = Q[Q.head]
+    if Q.head == Q.length
+        Q.head = 1
+    else
+        Q.head = Q.head + 1
+    return x
+```
 ## Task 4
+```
+INSERT-FRONT(D, x)
+
+if (D.head == D.tail + 1) or (D.head == 1 and D.tail == D.length)
+    error "overflow"
+else
+    if D.head == 1
+        D.head = D.length
+    else
+        D.head = D.head - 1
+    D[D.head] = x
+
+INSERT-REAR(D, x)
+
+if (D.head == D.tail + 1) or (D.head == 1 and D.tail == D.length)
+    error "overflow"
+else
+    D[D.tail] = x
+    if D.tail == D.length
+        D.tail = 1
+    else
+        D.tail = D.tail + 1
+
+DELETE-FRONT(D)
+
+if D.head == D.tail
+    error "underflow"
+else
+    x = D[D.head]
+    if D.head == D.length
+        D.head = 1
+    else
+        D.head = D.head + 1
+    return x
+
+DELETE-REAR(D)
+
+if D.head == D.tail
+    error "underflow"
+else
+    if D.tail == 1
+        D.tail = D.length
+    else
+        D.tail = D.tail - 1
+    return D[D.tail]
+```
