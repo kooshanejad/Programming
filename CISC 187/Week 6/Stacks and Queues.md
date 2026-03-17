@@ -50,22 +50,22 @@ DEQUEUE(Q):
 ```
 ENQUEUE(Q, x)
 
-if (Q.head == Q.tail + 1) or (Q.head == 1 and Q.tail == Q.length)
+if (Q.head = Q.tail + 1) or (Q.head = 1 and Q.tail = Q.length) then
     error "overflow"
 else
     Q[Q.tail] = x
-    if Q.tail == Q.length
+    if Q.tail = Q.length then
         Q.tail = 1
     else
         Q.tail = Q.tail + 1
 
 DEQUEUE(Q)
 
-if Q.head == Q.tail
+if Q.head = Q.tail then
     error "underflow"
 else
     x = Q[Q.head]
-    if Q.head == Q.length
+    if Q.head = Q.length then
         Q.head = 1
     else
         Q.head = Q.head + 1
@@ -75,10 +75,10 @@ else
 ```
 INSERT-FRONT(D, x)
 
-if (D.head == D.tail + 1) or (D.head == 1 and D.tail == D.length)
+if (D.head = D.tail + 1) or (D.head = 1 and D.tail = D.length) then
     error "overflow"
 else
-    if D.head == 1
+    if D.head = 1 then
         D.head = D.length
     else
         D.head = D.head - 1
@@ -86,22 +86,22 @@ else
 
 INSERT-REAR(D, x)
 
-if (D.head == D.tail + 1) or (D.head == 1 and D.tail == D.length)
+if (D.head = D.tail + 1) or (D.head = 1 and D.tail = D.length) then
     error "overflow"
 else
     D[D.tail] = x
-    if D.tail == D.length
+    if D.tail = D.length then
         D.tail = 1
     else
         D.tail = D.tail + 1
 
 DELETE-FRONT(D)
 
-if D.head == D.tail
+if D.head = D.tail then
     error "underflow"
 else
     x = D[D.head]
-    if D.head == D.length
+    if D.head = D.length then
         D.head = 1
     else
         D.head = D.head + 1
@@ -109,12 +109,14 @@ else
 
 DELETE-REAR(D)
 
-if D.head == D.tail
+if D.head = D.tail then
     error "underflow"
 else
-    if D.tail == 1
+    if D.tail = 1 then
         D.tail = D.length
     else
         D.tail = D.tail - 1
     return D[D.tail]
 ```
+
+Video:
