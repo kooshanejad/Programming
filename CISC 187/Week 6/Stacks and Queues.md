@@ -118,5 +118,3 @@ else
         D.tail = D.tail - 1
     return D[D.tail]
 ```
-
-Video:
