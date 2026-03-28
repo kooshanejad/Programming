@@ -21,7 +21,7 @@ findGreatest(root):
     while current.right is not null:
         current = current.right
 
-    return current.value
+    return current.data
 ```
 ## Task 4
 ```cpp
